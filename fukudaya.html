@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="website_stylesheet.css">
+    <style>
+        .hotelfront {
+            background: url("Images/hotelfront.jpg") no-repeat center bottom;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background-size: cover;
+            position: relative;
+            max-height: 800px;
+        }
+
+        .amenitiesimg {
+            display: block;
+            width: 90%;
+            max-width: 900px;
+            height: auto;
+            margin: 0 0 2em 0;
+        }
+
+        @media (min-width: 1100px) {
+            .hotelfront {
+                width: 100%;
+            }
+            .amenities {
+                text-align: center;
+                font-size: 1.2em;
+                padding: 1em;
+            }
+            .hotel-info {
+                text-align: center;
+                font-size: 1.2em;
+                padding: 1em;
+            }
+
+            .amenitiesimg {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .hotel-info h2 {
+                font-size: 2em;
+            }
+
+            .hotel-info p {
+                font-size: 1.2em;
+                line-height: 1.8;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="topborder"> </div>
+
+<div class="top">
+    <header>
+        <div class="logo">
+             <img src="Images/hotellogo.png" alt="Hotel Fukudaya logo" />
+        </div>
+        <nav>
+            <a href="fukudaya.html">Home</a><span></span>
+            <a href="aboutpage.html">About</a><span></span>
+            <a href="roompage.html">Accommodation</a><span></span>
+            <a href="gallery.html">Gallery</a><span></span>
+            <a href="access.html">Access</a><span></span>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="mainpage">
+        <section class="hotelfront">
+            <div class="welcomebox">
+                <h1>WELCOME</h1>
+                <p>いらっしゃいませ</p>
+            </div>
+        </section>
+
+        <section class="graybox">
+           <p>
+               Steps away from the iconic Shibuya crossing, Hotel Fukudaya is nestled in a calmer residential area convenient for sightseeing and business activities. Experience the recently renovated building with traditional hot public baths, a choice between a classically furnished Western room or a Japanese room, tatami (woven-straw) mats and traditional futon beds for a one of a kind stay at Hotel Fukudaya.
+           </p>
+        </section>
+        <section class="whitebox">
+            <div class="amenities">
+                <h2>Amenities</h2>
+                <img src="Images/amenities.png" alt="Amenities" class="amenitiesimg"/>
+            </div>
+
+            <div class="hotel-info">
+                <h2>Hotel Information</h2>
+                <p>- Smoking is not permitted in the entire hotel. If you wish to smoke, please use the smoking area outside.</p>
+                <p>- Please check in between 15:00 and 23:00. If you arrive earlier than 15:00, you can leave your luggage at the front desk.</p>
+                <p>- The front desk closes between 25:00 and 7:00. And the front door will be locked for security purposes, but you will be given a code to unlock the door when you check in.</p>
+                <p>- Check-out time is 10:00. After that time, you may extend your stay until 12:00. Extension fee is ¥1,100 per hour for Budget, Economy, and Standard rooms, and ¥2,200 per hour for Family rooms.</p>
+                <p>- Shared baths are available from 19:00 to 25:00.  Shower rooms are available 24 hours a day, anytime.</p>
+                <p>- Wi-Fi is available free of charge. There is also a workspace in the building for your use.</p>
+                <p>- Reservations are required to use the parking lot. Parking is available from 15:00 to the next 10:00 on the day of your stay. This does not apply to guests staying for consecutive nights. Reservations cannot be made before that time or after that time, as they are subject to availability for other guests. Parking fee is ¥2,750 per regular car per night. For more information, please contact us directly by e-mail or phone. Please note that we are not responsible for theft, damage, accidents, etc. in the parking lot.</p>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>
