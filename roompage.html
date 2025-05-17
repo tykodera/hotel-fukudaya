@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accomodations</title>
+    <link rel="stylesheet" type="text/css" href="website_stylesheet.css">
+    <style>
+
+        .jroombackground {
+            background: url("Images/Japanese style room.jpg") no-repeat center center;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+            padding-left: 5%;
+            background-size: cover;
+            position: relative;
+        }
+
+        .rates {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 40px 60px;
+            width: 50%;
+            aspect-ratio: 5/3;
+            max-width: 1000px;
+            min-width: 320px;
+            gap: 1em;
+            margin-bottom: 1em;
+            transform: translateY(-15%);
+        }
+
+        .chartimg {
+            display: block;
+            align-self: flex-start;
+            max-width: 100%;
+            height: auto;
+            margin-top: 1em;
+        }
+
+        .reserve-button {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 0.8em 1.5em;
+            font-size: 1.5em;
+            color: #666;
+            text-decoration: none;
+            transition: background 0.2s ease;
+            width: fit-content;
+            margin-top: 0.01em;
+            position: relative;
+            margin-left: 37%;
+        }
+
+        .reserve-button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #444
+        }
+
+        @media (min-width: 1100px) {
+           .reserve-button {
+               font-size: 1.5em;
+               padding: 1em 2em;
+           }
+        }
+
+        .rates {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            max-width: 1000px;
+            min-width: 300px;
+        }
+
+        .rates h1 {
+            font-size: max(3vw, 48px);
+            margin: 0;
+            color: #666;
+        }
+         .rates p {
+             font-size: 1.2em;
+             color: #666;
+         }
+
+        @media (min-width: 1100px) {
+            .rates p {
+                font-size: 1.8em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="topborder"> </div>
+
+<div class="top">
+    <header>
+        <div class="logo">
+            <img src="Images/hotellogo.png" alt="Hotel Fukudaya logo" />
+            </div>
+        <nav>
+            <a href="website%201.html">Home</a><span></span>
+            <a href="aboutpage.html">About</a><span></span>
+            <a href="roompage.html">Rooms</a><span></span>
+            <a href="gallery.html">Gallery</a><span></span>
+            <a href="access.html">Access</a><span></span>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="mainpage">
+        <section class="jroombackground">
+            <div class="rates">
+                <h1>Room Rates</h1>
+                <p>(Including TAX)</p>
+                <img src="Images/chart.png" alt="Rate Chart" class="chartimg"/>
+            </div>
+
+            <a href="contact.html" class="reserve-button">Reserve</a>
+        </section>
+    </div>
+</div>
+</body>
+</html>

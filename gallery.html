@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="website_stylesheet.css">
+    <style>
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1em;
+            padding: 2em;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            height: auto;
+            object-fit: cover;
+            border: 1px solid #ccc;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            text-align: center;
+            color: #444;
+            margin-top: 2em;
+        }
+
+        p {
+            text-align: right;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            flex-direction: column;
+            z-index: 1000;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+
+        #overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 0 20px #000;
+        }
+
+        #overlay p.caption {
+            text-align: center;
+            margin-top: 1em;
+            font-size: 2em;
+            color: #fff;
+            max-width: 90%;
+            font-size: 1.1em;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="topborder"></div>
+<div class="top">
+    <header>
+        <div class="logo">
+            <img src="Images/hotellogo.png" alt="Hotel Fukudaya logo" />
+        </div>
+        <nav>
+            <a href="website%201.html">Home</a><span></span>
+            <a href="aboutpage.html">About</a><span></span>
+            <a href="roompage.html">Accommodation</a><span></span>
+            <a href="gallery.html">Gallery</a><span></span>
+            <a href="access.html">Access</a><span></span>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="mainpage">
+        <section class="whitebox">
+
+            <h2>Room Gallery</h2>
+            <p>(Click to enlarge)</p>
+            <div class="gallery-container">
+                <img src="Images/roomgallery/room1.jpg" alt="Japanese-style room">
+                <img src="Images/roomgallery/room2.jpg" alt="Japanese-style room">
+                <img src="Images/roomgallery/room3.jpg" alt="Japanese-style room">
+                <img src="Images/roomgallery/room4.jpg" alt="Japanese-style room">
+                <img src="Images/roomgallery/room5.jpg" alt="Japanese-style room">
+                <img src="Images/roomgallery/room6.jpg" alt="Japanese-style room">
+                <img src="Images/roomgallery/room7.jpg" alt="Japanese-style room">
+                <img src="Images/roomgallery/room8.jpg" alt="Japanese-style room">
+                <img src="Images/roomgallery/room9.jpg" alt="Western-style room">
+                <img src="Images/roomgallery/room10.jpg" alt="Western-style room">
+                <img src="Images/roomgallery/room11.jpg" alt="Private Bathroom">
+                <img src="Images/roomgallery/room12.jpg" alt="Private Bathroom">
+            </div>
+
+            <h2>Facility Gallery</h2>
+            <p>(Click to enlarge)</p>
+            <div class="gallery-container">
+                <img src="Images/facilitygallery/facility1.jpg" alt="Sinks">
+                <img src="Images/facilitygallery/facility2.jpg" alt="Bathhouse">
+                <img src="Images/facilitygallery/facility3.jpg" alt="Bathhouse view">
+                <img src="Images/facilitygallery/facility4.jpg" alt="Changing room">
+                <img src="Images/facilitygallery/facility5.jpg" alt="Work space">
+                <img src="Images/facilitygallery/facility6.jpg" alt="Interior">
+                <img src="Images/facilitygallery/facility7.jpg" alt="Lobby">
+                <img src="Images/facilitygallery/facility8.jpg" alt="Front entrance">
+                <img src="Images/facilitygallery/facility9.jpg" alt="Entryway view">
+                <img src="Images/facilitygallery/facility10.jpg" alt="Front garden">
+                <img src="Images/facilitygallery/facility11.jpg" alt="Front pathway">
+                <img src="Images/facilitygallery/facility12.jpg" alt="Hotel Fukudaya">
+                <img src="Images/facilitygallery/facility13.jpg" alt="Front Gate">
+            </div>
+
+        </section>
+    </div>
+</div>
+
+<div id="overlay" onclick="hideOverlay()">
+    <img id="overlay-img" src="" alt="Full view">
+    <p class="caption" id="overlay-caption"></p>
+</div>
+
+<script>
+    const overlay = document.getElementById('overlay');
+    const overlayImg = document.getElementById('overlay-img');
+    const overlayCaption = document.getElementById('overlay-caption');
+    const galleryImages = document.querySelectorAll('.gallery-container img');
+
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            overlay.style.display = 'flex';
+            overlayImg.src = img.src;
+            overlayImg.alt = img.alt;
+            overlayCaption.textContent = img.alt;
+        });
+    });
+
+    function hideOverlay() {
+        overlay.style.display = 'none';
+        overlayImg.src = '';
+        overlayCaption.textContent = '';
+    }
+</script>
+
+</body>
+</html>

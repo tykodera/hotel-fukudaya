@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>access</title>
+    <link rel="stylesheet" type="text/css" href="website_stylesheet.css">
+    <style>
+        .map-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+
+        .map-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+        }
+
+        .map-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .map-container {
+              max-width: 90%;
+              padding: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+          .map-container {
+            max-width: 90%;
+            padding: 0.5em;
+          }
+
+          .map-wrapper {
+            padding-top: 90%;
+          }
+        }
+        .mainpage {
+          width: 100%;
+        }
+        .cityback {
+            background: url("Images/scramble.jpg") no-repeat center bottom;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background-size: cover;
+            position: relative;
+            max-height: 800px;
+        }
+
+        .welcomebox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 40px 60px;
+            width: 40%;
+            aspect-ratio: 5/3;
+            max-width: 1000px;
+            min-width: 300px;
+          }
+
+        .welcomebox h1 {
+            font-size: 48px;
+            margin: 0;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="topborder"> </div>
+<div class="top">
+    <header>
+        <div class="logo">
+          <img src="Images/hotellogo.png" alt="Hotel Fukudaya logo" />
+        </div>
+        <nav>
+          <a href="website%201.html">Home</a><span></span>
+          <a href="aboutpage.html">About</a><span></span>
+          <a href="roompage.html">Accommodation</a><span></span>
+          <a href="gallery.html">Gallery</a><span></span>
+          <a href="access.html">Access</a><span></span>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <div class="mainpage">
+        <section class="cityback">
+          <div class="welcomebox">
+            <h1>EXPLORE TOKYO</h1>
+          </div>
+        </section>
+
+        <section class="graybox">
+          <p>
+            Keio Shinsen Train Station is a 7-minute walk from the hotel, and the famous Shibuya 109 Building is a 12-minute walk away. The trendy Daikanyama area is a 15-minute walk away.
+          </p>
+        </section>
+
+        <div class="map-container">
+          <div class="map-wrapper">
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.9328254098173!2d139.6888575763673!3d35.65402663146694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b55295601a5%3A0x452b5a22a4911f88!2sHotel%20Fukudaya!5e0!3m2!1sen!2sus!4v1746812684430!5m2!1sen!2sus"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
